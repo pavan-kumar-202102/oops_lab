@@ -3,7 +3,8 @@ using namespace std;
 
 class math{
     public:
-    double power(double m,int n=2){
+    double power(double m,int n=2)// power caliculation function
+    {
         double result=1;
         for(int i=0;i<n;i++){
             result*=m;
