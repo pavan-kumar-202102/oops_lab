@@ -5,9 +5,8 @@ using namespace std;
  }
  int main(){
      string input;
-     cout<<"enter your name"<<endlp;
+     cout<<"enter your name"<<endl;
      cin>>input;
      output(input);
      return 0;
  }
-git

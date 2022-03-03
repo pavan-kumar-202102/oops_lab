@@ -15,7 +15,7 @@ class matrix{
 		void input( int m,int n)    //taking input of array
 		{
 		
-			cout<<"enter the elements of matrix";
+			cout<<"enter the elements of matrix ";
 			for(i=0;i<m;i++){
 				for(j=0;j<n;j++){
 					cin>>arr[i][j];
