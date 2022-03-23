@@ -1,0 +1,67 @@
+#include<iostream>
+#include<string>
+using namespace std;
+class Account{
+	
+	private:
+		string acc_no;
+	public:
+		int intr,balance,w_money,d_money;
+		Account( ){
+			acc_no="SBIN0004569";
+			balance=0;
+		}
+		void diposit(int d_money)
+		{
+			balance+=d_money;
+			cout<<"present balance in your acc_no "<<acc_no<<"is "<<balance<<endl;
+		}
+		void withdraw(int w_money){
+			if(w_money >=balance){
+				cout<<"insufficient balance "<<endl;
+			}
+			else{
+				balance -=w_money;
+				cout<<" present balance in "<<acc_no<<" is "<<balance<<endl;
+			}
+		}
+		void intrest(int t,int r){
+			intr=(balance*t*r)/100;
+			cout<<"the intrest to ur balance is "<<intr;
+		}
+};
+int main(){
+		Account ac;
+	int n,money;
+	//account ac;
+	cout<<"enter your options \n 1.diposit \n 2.withdraw \n 3.intrst \n";
+	cin>>n;
+	while(n>=0){
+	   
+		switch (n){
+		   
+			case 1:
+				cout<<"enter money to diposit ";
+				cin>>money;
+				ac.diposit(money);
+				break;
+			case 2:
+				cout<<"enter money to withdraw  ";
+				cin>>money;
+				ac.withdraw(money);
+					break;
+			case 3:
+				cout<<"enter money to withdraw  ";
+				cin>>money;
+				ac.diposit(money);
+					break;
+			case -1:
+				cout<<"Exit\n ";
+					break;
+				
+		}
+		  cout<<"enter your options \n 1.diposit \n 2.withdraw \n 3.intrst \n";
+		  cin>>n;
+	}
+	return 0;
+}
